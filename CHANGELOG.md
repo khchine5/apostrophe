@@ -1,5 +1,37 @@
 # Changelog
 
+## 2.40.0
+
+Unit tests passing.
+
+Regression tests passing.
+
+* Support for "select everything" when managing pieces. Once you check the box to select everything on the current page, you are given a secondary option to select everything that matches your current criteria. This works both when choosing pieces for widgets and when working with batch operations like "trash" or "rescue."
+* Fixed various bugs affecting combinations of "select all on page", the chooser and working with images.
+* Improvements to batch operations on pieces. The `requiredField` property is checked correctly, and the new `onlyIf` property allows for passing a function that accepts the doc type name and decides whether the button should appear. Multiword action names are properly camelcased. New "success" and "dataSource" options to `batchSimple` allow for carrying out additional operations afterward as well as gathering input independently at the start. And batch operations are composed late so that other modules can add them.
+* The `self.api` and `self.html` methods of `apostrophe-context` and `apostrophe-modal` now support a syntax for making cross-module API calls, just like templates.
+* Addressed moog versioning issue with latest npm that caused errors about "synth.instanceOf" not being found depending on the state of your npm cache.
+
+## 2.39.2
+
+Unit tests passing.
+
+Startup-related regression tests passing.
+
+* The `APOS_MONGODB_LOG_LEVEL` environment variable can now be set to `debug`, `info` or anything else supported by the MongoDB driver's `Logger.setLevel` method. This is helpful for debugging database issues at the lowest level.
+
+## 2.39.1
+
+Unit tests passing.
+
+Regression tests passing.
+
+* Factored out a `getBaseUrl` method for `apostrophe-pages`, allowing
+overrides of this that pay attention to `req`.
+* Report `pageBeforeSend` errors and failures to load the global doc properly, don't silently tolerate them.
+* Documentation corrections. Thanks to Frederik Ekelund.
+ 
+
 ## 2.39.0
 
 Unit tests passing.
