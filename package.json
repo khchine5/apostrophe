@@ -1,10 +1,11 @@
 {
   "name": "apostrophe",
-  "version": "2.46.1",
+  "version": "2.47.0",
   "description": "The Apostrophe Content Management System.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && eslint ."
+    "test": "mocha && eslint .",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
